@@ -20,6 +20,8 @@ module.exports =
 		###
 		app.get '/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/auth/facebook/failure' }), (req, res) ->
 
+			# They've authenticated so let's redirect them to their account page
+
 			res.redirect '/account' 
 
 
@@ -49,7 +51,7 @@ module.exports =
 		app.get '/account', ensureLoggedIn, (req, res) ->
 
 
-			res.render 'account'
+			res.render 'account', user: req.user
 
 
 		###

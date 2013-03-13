@@ -2,7 +2,7 @@ express 				= require 'express'
 passport 				= require 'passport'
 passportConfiguration 	= require './passport-configuration'
 routes 					= require './routes'
-
+db 						= require './db'
 
 app = express()
 
@@ -32,8 +32,13 @@ passportConfiguration.configure()
 
 
 
-# Start our server
+# Connect to the database
 
+db.connect()
+
+
+
+# Start our server
 
 app.listen 5010, () ->
 	console.log "Listening on port 5010"
