@@ -4,22 +4,29 @@ A sample nodejs app that authenticates with facebook and stores user information
 
 ## Install MongoDB
 
-### Install a package manager 
+You can download it directly from the website here http://www.mongodb.org/downloads or see below for installing from a package manager.
+
+### Via package manager 
 
 #### Mac
 
+Assuming you already have XCode installed
+
 **Homebrew**  
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"  
+```bash
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 sudo brew install mongodb
+```  
 
 #### Windows
 
 **Chocolatey**
-
+```cmd
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('http://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
 
 cinst mongodb
+```  
 
 
 
