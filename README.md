@@ -28,6 +28,7 @@ sudo brew install mongodb
 cinst mongodb
 ```  
 
+You can test that it worked by typing `mongo` from the commandline.
 
 
 ## Create package.json
